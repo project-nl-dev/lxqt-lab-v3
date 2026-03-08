@@ -1,0 +1,6 @@
+nano lynis-3.1.4.sh
+
+chmod +x lynis-3.1.4.sh && bash lynis-3.1.4.sh
+
+#!/bin/bash
+apt-get install lynis && lynis audit system --pentest
