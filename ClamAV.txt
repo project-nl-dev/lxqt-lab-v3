@@ -1,0 +1,7 @@
+sudo apt install clamav clamtk clamav-daemon -y
+sudo systemctl enable clamav-daemon
+sudo systemctl start clamav-daemon
+
+sudo freshclam
+
+clamscan --recursive /home/umbra
