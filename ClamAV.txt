@@ -4,4 +4,4 @@ sudo systemctl start clamav-daemon
 
 sudo freshclam
 
-clamscan --recursive /home/umbra
+clamscan --recursive /home/user
